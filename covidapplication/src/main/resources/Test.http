@@ -1,0 +1,2 @@
+GET http://localhost:8080/covid-management/countries/RU
+Accept: application/json

@@ -1,4 +1,4 @@
-package ru.school.micro.services.controller;
+package ru.school.micro.services.covid.controller;
 
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -6,8 +6,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
-import ru.school.micro.services.dto.CountryDto;
-import ru.school.micro.services.service.CovidInfoService;
+import ru.school.micro.services.covid.dto.CountryDto;
+import ru.school.micro.services.covid.service.CovidInfoService;
 
 import java.io.IOException;
 

@@ -1,9 +1,11 @@
-package ru.school.micro.services;
+package ru.school.micro.services.covid;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 @SpringBootApplication
+@EnableEurekaClient
 public class CovidApplication {
 
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package ru.school.micro.services.dto;
+package ru.school.micro.services.covid.dto;
 
 import lombok.Data;
 

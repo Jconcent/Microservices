@@ -12,6 +12,7 @@
 
     <modules>
         <module>covidapplication</module>
+        <module>countriesapplication</module>
     </modules>
 
     <properties>

@@ -19,26 +19,9 @@ import java.util.Properties;
 @Slf4j
 public class CovidInfoService {
 
-    private Properties countryCodeProperty;
-
-    public CovidInfoService() {
-        this.countryCodeProperty = new Properties();
-        loadProperty();
-    }
-
     public CountryDto getCovidInfoByCountryName(String countryName) {
         RestTemplate restTemplate = new RestTemplate();
-        String countryCode = countryCodeProperty.getProperty(countryName, "RU");
-        ResponseEntity<CovidData> forEntity = restTemplate.getForEntity("https://corona-api.com/countries/" + countryCode, CovidData.class);
+        ResponseEntity<CovidData> forEntity = restTemplate.getForEntity("https://corona-api.com/countries/" + countryName, CovidData.class);
         return Optional.ofNullable(forEntity.getBody()).map(CovidData::getData).orElse(null);
-    }
-
-    private void loadProperty() {
-        try (InputStreamReader inputStreamReader = new InputStreamReader(Objects.requireNonNull(
-                this.getClass().getClassLoader().getResourceAsStream("countryName.properties")))) {
-            this.countryCodeProperty.load(inputStreamReader);
-        } catch (IOException e) {
-            log.error("Error load property");
-        }
     }
 }

@@ -1,4 +1,4 @@
-GET http://localhost:8080/covid-management/countries/Italy
+GET http://localhost/information-management/countries/Italy
 Accept: application/json
 
 ###

@@ -1,4 +1,4 @@
-package ru.school.micro.services.covid.dto;
+package ru.school.micro.services.aggregatorapplication.entity.covid;
 
 import lombok.Data;
 

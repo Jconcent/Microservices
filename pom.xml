@@ -13,6 +13,9 @@
     <modules>
         <module>covidapplication</module>
         <module>countriesapplication</module>
+        <module>eureka-server</module>
+        <module>gateway-service</module>
+        <module>aggregatorapplication</module>
     </modules>
 
     <properties>
